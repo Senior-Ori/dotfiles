@@ -1,0 +1,11 @@
+[colors]
+header = "214"  # RGB orange color (or try "214" for ANSI)
+
+[ascii_art]
+enabled = true
+art = """
+ /\_/\  
+( o.o ) 
+ > ^ <
+"""
+

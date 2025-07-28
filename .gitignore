@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# Allow specific files and directories (whitelist)
+!.gitignore
+
+
+# Allow listed config folders and their contents
+!autostart/
+!autostart/**
+
+!dconf/
+!dconf/**
+
+!fastfetch/
+!fastfetch/**
+
+!hypr/
+!hypr/**
+
+!waybar/
+!waybar/**
