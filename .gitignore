@@ -4,6 +4,8 @@
 # Allow specific files and directories (whitelist)
 !.gitignore
 
+!readme.md
+
 
 # Allow listed config folders and their contents
 !autostart/
