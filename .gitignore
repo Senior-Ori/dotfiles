@@ -20,3 +20,6 @@
 
 !waybar/
 !waybar/**
+
+!ghostty/
+!ghostty/**
