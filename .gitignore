@@ -25,3 +25,9 @@
 
 !ghostty/
 !ghostty/**
+
+!nvim/
+!nvim/**
+
+!fish/
+!fish/**
