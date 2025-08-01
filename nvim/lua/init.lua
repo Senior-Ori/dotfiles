@@ -1,5 +1,4 @@
 require("config.lazy")
-
 require("config.lsp")
 
 local cmp = require("cmp")

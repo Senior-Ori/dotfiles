@@ -19,4 +19,11 @@ return {
 
   -- Syntax Highlighting
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+
+  -- ⟢RustyChan🦀
+  {
+  'mrcjkb/rustaceanvim',
+  version = '^6', -- Recommended
+  lazy = false, -- This plugin is already lazy
+  }
 }
