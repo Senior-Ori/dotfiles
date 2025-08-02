@@ -12,8 +12,10 @@ function wallpaper_loop --description 'Cycle through wallpapers every 3 seconds'
                 ",/home/ori/Wallpapers/Ayase-Seiko-Dandadan-Anime-9019685.jpeg" \
                 ",/home/ori/Wallpapers/Stable-diffusion-нейронные-сети-Tatsumaki-7846003.jpeg"
     
-    for wp in $wallpapers
-        hyprctl hyprpaper wallpaper $wp
-        sleep 3
-    end
+    while true
+    	for wp in $wallpapers
+        	hyprctl hyprpaper wallpaper $wp
+        	sleep 3
+    	end
+end
 end
