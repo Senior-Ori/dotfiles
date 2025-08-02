@@ -7,17 +7,20 @@
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
+	"custom/lframe",
         "hyprland/workspaces",
-	"custom/now-playing"
+	"custom/rframe"
+	//"custom/now-playing"
     ],
     "modules-center": [
-        "hyprland/window"
+	"custom/now-playing"	
+        //"hyprland/window"
     ],
     "modules-right": [
-        "mpd",
+        // "mpd",
 	"idle_inhibitor",
         "pulseaudio",
-        "network",
+	// "network",
         "cpu",
         "memory",
         "temperature",
@@ -43,9 +46,7 @@
 	"default": ""
          }
      },
-     "hyprland/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
+     
     "hyprland/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -150,11 +151,19 @@
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous"
     },
+
+    "custom/lframe": {
+	"format": "["
+    },
+    "custom/rframe": {
+	"format": "]"
+    },
+	
+
     "custom/playerctl": {
       "format": "{}",
       "return-type": "json",
       "max-length": 18,
-      // "exec": "playerctl -i firefox -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{artist}} - {{markup_escape(title)}}\", \"class\": \"{{status}}\"}' -F",
       "exec": "~/.config/waybar/scripts/playerctl_scroll.sh",
       "on-click": "playerctl -i firefox previous",
       "on-click-right": "playerctl -i firefox next",
