@@ -15,7 +15,7 @@ function wallpaper_loop --description 'Cycle through wallpapers every 3 seconds'
     while true
     	for wp in $wallpapers
         	hyprctl hyprpaper wallpaper $wp
-        	sleep 3
+        	sleep 240
     	end
 end
 end
