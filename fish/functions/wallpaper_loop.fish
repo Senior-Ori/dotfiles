@@ -1,4 +1,4 @@
-function wallpaper_loop --description 'Cycle through wallpapers every 3 seconds'
+function wallpaper_loop --description 'Cycle through wallpapers in random order every 4 minutes'
     set wallpapers \
                 ",/home/ori/Wallpapers/66bfdbf3e3a106572bc235afbeb63123.jpg" \
                 ",/home/ori/Wallpapers/8765cfec07cc1f96bc0da27b0bc0f841.jpg" \
@@ -13,9 +13,20 @@ function wallpaper_loop --description 'Cycle through wallpapers every 3 seconds'
                 ",/home/ori/Wallpapers/Stable-diffusion-нейронные-сети-Tatsumaki-7846003.jpeg"
     
     while true
-    	for wp in $wallpapers
-        	hyprctl hyprpaper wallpaper $wp
-        	sleep 240
-    	end
-end
+        # Create a shuffled copy of the wallpapers
+        set shuffled $wallpapers
+        
+        # Fisher–Yates shuffle
+        for i in (seq (count $shuffled) -1 2)
+            set j (math (random) % $i + 1)
+            set temp $shuffled[$i]
+            set shuffled[$i] $shuffled[$j]
+            set shuffled[$j] $temp
+        end
+        
+        for wp in $shuffled
+            hyprctl hyprpaper wallpaper $wp
+            sleep 240
+        end
+    end
 end
