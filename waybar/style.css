@@ -12,7 +12,7 @@
 }
 #waybar {
     	color: @foreground-inactive;
-    	background-color: @background;
+    	background-color: rgba(0, 40, 255, 0.1);
 }
 
 
